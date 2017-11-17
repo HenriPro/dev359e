@@ -28,10 +28,6 @@ const FixedMenu = () => (
         </Menu.Item>
         <Menu.Item as='a'>About Us</Menu.Item>
         <Menu.Item as='a'>Contact</Menu.Item>
-        <Menu.Item as='a'>Careers</Menu.Item>
-        <Menu.Menu position='right'>
-
-        </Menu.Menu>
       </Container>
     </Menu>
   </Container>
@@ -70,18 +66,13 @@ export default class App extends Component {
           >
 
             <Menu stackable borderless pointing size='massive'
-              style={{ padding: '0em 6em', opacity: 0.9 }}
-            >
+              style={{ padding: '0em 6em', opacity: 0.9 }} >
               <Menu.Item as='a' className="vertically fitted item" >
                 <img src={logo} alt="Dev 35.9E" style={{ height: 50, width: 'auto' }} />
               </Menu.Item>
               <Menu.Item as='a'>About Us</Menu.Item>
               <Menu.Item as='a'>Contact</Menu.Item>
-              <Menu.Item as='a'>Careers</Menu.Item>
-              <Menu.Item position='right'>
-              </Menu.Item>
             </Menu>
-
 
             <Container text>
               <Header
@@ -182,14 +173,14 @@ export default class App extends Component {
           <Container>
             <Grid divided inverted stackable>
               <Grid.Row>
-                <Grid.Column width={3}>
+                <Grid.Column width={4}>
                   <Header inverted as='h4' content='About' />
                   <List link inverted>
                     <List.Item as='a'>Sitemap</List.Item>
                     <List.Item as='a'>Contact Us</List.Item>
                   </List>
                 </Grid.Column>
-                <Grid.Column width={3}>
+                <Grid.Column width={4}>
                   <Header inverted as='h4' content='Services' />
                   <List link inverted>
                     <List.Item as='a'>Javascript</List.Item>
@@ -200,7 +191,7 @@ export default class App extends Component {
               </Grid.Row>
             </Grid>
           </Container>
-          <Container style={{ padding: '1em 0em', color: 'grey', fontSize: '0.8em' }}>
+          <Container style={{ padding: '3em 0em 0em 0em', color: 'grey', fontSize: '0.8em' }}>
             <p > All background images are derivative of photos by <a href='https://www.flickr.com/photos/jennyellenbrown'>Jenny Brown</a>, used under CC. All background images are licensed under CC BY by Henri Pietila.</p>
           </Container>
         </Segment>
