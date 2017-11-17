@@ -15,25 +15,22 @@ import {
 import logo from './draft1b.png'
 import pilers from './pilers.svg'
 import sunset from './sunset.svg'
+import tree from './tree.svg'
+import theatre from './theatre.png'
 
 const FixedMenu = () => (
   <Container>
-    <Menu  stackable fixed='top' size='massive' inverted
-            style= {{ opacity: 0.8}} >
+    <Menu stackable fixed='top' size='massive' inverted
+      style={{ opacity: 0.8 }} >
       <Container>
-        <Menu.Item as='a'  className="vertically fitted item" >
-        <img src={logo} alt="Dev 35.9E" style={{ height: 50, width: 'auto'}}  />
+        <Menu.Item as='a' className="vertically fitted item" >
+          <img src={logo} alt="Dev 35.9E" style={{ height: 50, width: 'auto' }} />
         </Menu.Item>
-        <Menu.Item as='a'>Work</Menu.Item>
-        <Menu.Item as='a'>Company</Menu.Item>
+        <Menu.Item as='a'>About Us</Menu.Item>
+        <Menu.Item as='a'>Contact</Menu.Item>
         <Menu.Item as='a'>Careers</Menu.Item>
         <Menu.Menu position='right'>
-          <Menu.Item className='item'>
-            <Button as='a'>Log in</Button>
-          </Menu.Item>
-          <Menu.Item>
-            <Button as='a' primary>Sign Up</Button>
-          </Menu.Item>
+
         </Menu.Menu>
       </Container>
     </Menu>
@@ -52,7 +49,7 @@ export default class App extends Component {
 
     return (
       <div>
-        { visible ? <FixedMenu /> : null }
+        {visible ? <FixedMenu /> : null}
 
         <Visibility
           onBottomPassed={this.showFixedMenu}
@@ -62,41 +59,40 @@ export default class App extends Component {
           <Segment
             inverted
             textAlign='center'
-            style={{ backgroundImage: `url(${pilers})`,
-                      minHeight: windowH*1.2,
-                      padding: '0em 0em',
-                      backgroundRepeat: 'no-repeat',
-                      backgroundSize: 'cover'
-                      }}
+            style={{
+              backgroundImage: `url(${pilers})`,
+              minHeight: windowH * 1.2,
+              padding: '0em 0em',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover'
+            }}
             vertical
           >
-            
-              <Menu stackable pointing  size='massive'
-                      style= {{ padding: '0em 6em', opacity: 0.9}}
-              >
-                <Menu.Item as='a' className="vertically fitted item" >
-                  <img src={logo} alt="Dev 35.9E" style={{ height: 50, width: 'auto' }}  />
-                </Menu.Item>
-                <Menu.Item as='a'>Work</Menu.Item>
-                <Menu.Item as='a'>Company</Menu.Item>
-                <Menu.Item as='a'>Careers</Menu.Item>
-                <Menu.Item position='right'>
-                  <Button as='a' >Log in</Button>
-                  <Button as='a'  primary style={{ marginLeft: '0.5em' }}>Sign Up</Button>
-                </Menu.Item>
-              </Menu>
-           
+
+            <Menu stackable borderless pointing size='massive'
+              style={{ padding: '0em 6em', opacity: 0.9 }}
+            >
+              <Menu.Item as='a' className="vertically fitted item" >
+                <img src={logo} alt="Dev 35.9E" style={{ height: 50, width: 'auto' }} />
+              </Menu.Item>
+              <Menu.Item as='a'>About Us</Menu.Item>
+              <Menu.Item as='a'>Contact</Menu.Item>
+              <Menu.Item as='a'>Careers</Menu.Item>
+              <Menu.Item position='right'>
+              </Menu.Item>
+            </Menu>
+
 
             <Container text>
               <Header
                 as='h1'
-                content='Imagine-a-Company'
+                content='Imagine your Product!'
                 inverted
                 style={{ fontSize: '4em', fontWeight: 'normal', marginBottom: 0, marginTop: '3em' }}
               />
               <Header
                 as='h2'
-                content='Do whatever you want when you want to.'
+                content='Lets make it happen.'
                 inverted
                 style={{ fontSize: '1.7em', fontWeight: 'normal' }}
               />
@@ -108,86 +104,79 @@ export default class App extends Component {
           </Segment>
         </Visibility>
 
-        <Segment  style={{ padding: '8em 0em',
-                          backgroundImage: `url(${sunset})`,
-                          minHeight: windowH * 1.2,
-                          backgroundRepeat: 'no-repeat',
-                          backgroundSize: 'cover'
-                         }} vertical>
+        <div style={{
+          padding: '8em 0em',
+          background: '#f2f4f4'
+        }} >
+          <Segment style={{ padding: '2em 0em' }} vertical>
+            <Container text >
+              <Header as='h3' style={{ fontSize: '2em' }}>Fullstack web-development made easy</Header>
+              <p style={{ fontSize: '1.33em' }}>
+                You provide the idea and we build it. It's that simple. </p>
+              <p>
+                We handle all the heavy lifting: coordination, management, and talent. </p>
+              <p>
+                Regardless of what stage you are at, be it greenfield or refreshing a legacy codebase, we have the expertise to handle it.
+              </p>
+            </Container>
+          </Segment>
+          <Segment style={{ padding: '0em' }} vertical>
+            <Grid celled='internally' columns='equal' stackable>
+              <Grid.Row textAlign='center'>
+                <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
+                  <Header as='h3' style={{ fontSize: '2em' }}>San Francisco Quality at a fraction of the costs</Header>
+                  <p style={{ fontSize: '1.33em' }}>-No longer do you have pick between price, quality, or convince</p>
+                </Grid.Column>
+                <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
+                  <Header as='h3' style={{ fontSize: '2em' }}>"Professionally trained, expert engineers"</Header>
+                  <Header as='h3' style={{ fontSize: '2em' }}>We work with you every step of the way</Header>
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
+          </Segment>
+        </div>
+
+        <Segment style={{
+          padding: '8em 0em',
+          backgroundImage: `url(${sunset})`,
+          minHeight: windowH * 1.2,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover'
+        }} vertical>
           <Grid container stackable verticalAlign='middle'>
             <Grid.Row>
               <Grid.Column width={8}>
-                <Header as='h3' style={{ fontSize: '2em' }}>We Help Companies and Companions</Header>
-                <p style={{ fontSize: '1.33em' }}>
-                  We can give your company superpowers to do things that they never thought possible. Let us delight
-                  your customers and empower your needs... through pure data analytics.
-                </p>
-                <Header as='h3' style={{ fontSize: '2em' }}>We Make Bananas That Can Dance</Header>
-                <p style={{ fontSize: '1.33em' }}>
-                  Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.
-                </p>
+                <Header as='h3' style={{ fontSize: '2em' }}>Fast Turnaround and Communication</Header>
+                <ul style={{ fontSize: '1.33em' }}>
+                  <li>Offices in Silicon Valley and Jordan</li>
+                  <li>We are always in your time zone</li>
+                  <li>Real-time and asynchronous communication</li>
+                </ul>
+                <Header as='h3' style={{ fontSize: '2em' }}>Agile Practices</Header>
+                <ul style={{ fontSize: '1.33em' }}>
+                  <li>We help you plan sprints.</li>
+                  <li>Weekly big picture updates</li>
+                  <li>Daily updates on Git, Assna, and Slack</li>
+                </ul>
               </Grid.Column>
               <Grid.Column floated='right' width={6}>
                 <Image
                   bordered
                   rounded
                   size='large'
-                  src='/assets/images/wireframe/white-image.png'
+                  src={theatre}
                 />
               </Grid.Column>
             </Grid.Row>
             <Grid.Row>
               <Grid.Column textAlign='center'>
-                <Button size='huge'>Check Them Out</Button>
+                <Button size='huge'>Get Started</Button>
               </Grid.Column>
             </Grid.Row>
           </Grid>
         </Segment>
-        <div>
-        <Segment style={{ padding: '0em' }} vertical>
-          <Grid celled='internally' columns='equal' stackable>
-            <Grid.Row textAlign='center'>
-              <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                <Header as='h3' style={{ fontSize: '2em' }}>"What a Company"</Header>
-                <p style={{ fontSize: '1.33em' }}>That is what they all say about us</p>
-              </Grid.Column>
-              <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                <Header as='h3' style={{ fontSize: '2em' }}>"I shouldn't have gone with their competitor."</Header>
-                <p style={{ fontSize: '1.33em' }}>
-                  <Image avatar src='/assets/images/avatar/large/nan.jpg' />
-                  <b>Nan</b> Chief Fun Officer Acme Toys
-                </p>
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </Segment>
-        <Segment style={{ padding: '8em 0em' }} vertical>
-          <Container text>
-            <Header as='h3' style={{ fontSize: '2em' }}>Breaking The Grid, Grabs Your Attention</Header>
-            <p style={{ fontSize: '1.33em' }}>
-              Instead of focusing on content creation and hard work, we have learned how to master the art of doing
-              nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic
-              and worth your attention.
-            </p>
-            <Button as='a' size='large'>Read More</Button>
-            <Divider
-              as='h4'
-              className='header'
-              horizontal
-              style={{ margin: '3em 0em', textTransform: 'uppercase' }}
-            >
-              <a href='#'>Case Studies</a>
-            </Divider>
-            <Header as='h3' style={{ fontSize: '2em' }}>Did We Tell You About Our Bananas?</Header>
-            <p style={{ fontSize: '1.33em' }}>
-              Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but it's really
-              true.
-              It took years of gene splicing and combinatory DNA research, but our bananas can really dance.
-            </p>
-            <Button as='a' size='large'>I'm Still Quite Interested</Button>
-          </Container>
-        </Segment>
-      </div>
+
+
 
         <Segment inverted vertical style={{ padding: '5em 0em' }}>
           <Container>
@@ -198,28 +187,21 @@ export default class App extends Component {
                   <List link inverted>
                     <List.Item as='a'>Sitemap</List.Item>
                     <List.Item as='a'>Contact Us</List.Item>
-                    <List.Item as='a'>Religious Ceremonies</List.Item>
-                    <List.Item as='a'>Gazebo Plans</List.Item>
                   </List>
                 </Grid.Column>
                 <Grid.Column width={3}>
                   <Header inverted as='h4' content='Services' />
                   <List link inverted>
-                    <List.Item as='a'>Banana Pre-Order</List.Item>
-                    <List.Item as='a'>DNA FAQ</List.Item>
-                    <List.Item as='a'>How To Access</List.Item>
-                    <List.Item as='a'>Favorite X-Men</List.Item>
+                    <List.Item as='a'>Javascript</List.Item>
+                    <List.Item as='a'>Backend</List.Item>
+                    <List.Item as='a'>Project management</List.Item>
                   </List>
-                </Grid.Column>
-                <Grid.Column width={7}>
-                  <Header as='h4' inverted>Footer Header</Header>
-                  <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
                 </Grid.Column>
               </Grid.Row>
             </Grid>
           </Container>
-          <Container  style={{ padding: '1em 0em', color: 'grey', fontSize: '0.8em'}}>
-          <p > All background images are derivative of photos by <a href='https://www.flickr.com/photos/jennyellenbrown'>Jenny Brown</a>, used under CC. All background images are licensed under CC BY by Henri Pietila.</p>
+          <Container style={{ padding: '1em 0em', color: 'grey', fontSize: '0.8em' }}>
+            <p > All background images are derivative of photos by <a href='https://www.flickr.com/photos/jennyellenbrown'>Jenny Brown</a>, used under CC. All background images are licensed under CC BY by Henri Pietila.</p>
           </Container>
         </Segment>
       </div>
