@@ -20,7 +20,7 @@ import theatre from './theatre.png'
 
 const FixedMenu = () => (
   <Container>
-    <Menu stackable fixed='top' size='massive' inverted
+    <Menu fixed='top' size='massive' inverted
       style={{ opacity: 0.8 }} >
       <Container>
         <Menu.Item as='a' className="vertically fitted item" >
@@ -60,6 +60,7 @@ export default class App extends Component {
               minHeight: windowH * 1.2,
               padding: '0em 0em',
               backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center center',
               backgroundSize: 'cover'
             }}
             vertical
@@ -107,7 +108,7 @@ export default class App extends Component {
               <p>
                 We handle all the heavy lifting: coordination, management, and talent. </p>
               <p>
-                Regardless of what stage you are at, be it greenfield or refreshing a legacy codebase, we have the expertise to handle it.
+                Regardless of what stage you are at, greenfield or refreshing a legacy codebase, we have the expertise to handle it.
               </p>
             </Container>
           </Segment>
@@ -132,6 +133,7 @@ export default class App extends Component {
           backgroundImage: `url(${sunset})`,
           minHeight: windowH * 1.2,
           backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center center',
           backgroundSize: 'cover'
         }} vertical>
           <Grid container stackable verticalAlign='middle'>
