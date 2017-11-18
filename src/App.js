@@ -25,7 +25,7 @@ const FixedMenu = () => (
       style={{ opacity: 0.8 }} >
       <Container>
         <Menu.Item as='a' className="vertically fitted item" >
-          <img src={logo} alt="Dev 35.9E" style={{ height: 50, width: 'auto' }} />
+          <img src={logo} alt="Dev 35.9E" style={{ height: '2.5em', width: 'auto' }} />
         </Menu.Item>
         <Menu.Item as='a'>About Us</Menu.Item>
         <Menu.Item as='a'>Contact</Menu.Item>
@@ -70,7 +70,7 @@ export default class App extends Component {
             <Menu stackable borderless pointing size='massive'
               style={{ padding: '0em 6em', opacity: 0.9 }} >
               <Menu.Item as='a' className="vertically fitted item" >
-                <img src={logo} alt="Dev 35.9E" style={{ height: 50, width: 'auto' }} />
+                <img src={logo} alt="Dev 35.9E" style={{ height: '3em', width: 'auto' }} />
               </Menu.Item>
               <Menu.Item as='a'>About Us</Menu.Item>
               <Menu.Item as='a'>Contact</Menu.Item>
@@ -81,7 +81,7 @@ export default class App extends Component {
                 as='h1'
                 content='Imagine your Product!'
                 inverted
-                style={{ fontSize: '4em', fontWeight: 'normal', marginBottom: 0, marginTop: '3em' }}
+                style={{ fontSize: '4em', fontWeight: 'bold', marginBottom: 0, marginTop: '3em' }}
               />
               <Header
                 as='h2'
@@ -89,14 +89,14 @@ export default class App extends Component {
                 inverted
                 style={{ fontSize: '1.7em', fontWeight: 'normal' }}
               />
-              <Button href='#section1' size='huge' color='purple'>
+              <Button href='#section2' size='huge' color='purple'>
                 Get Started
                 <Icon name='right arrow' />
               </Button>
             </Container>
           </Segment>
         </Visibility>
-        <ScrollableAnchor id={'section1'}>
+        <ScrollableAnchor id={'section2'}>
           <div style={{
             padding: '8em 0em',
             background: '#f2f4f4'
@@ -136,7 +136,8 @@ export default class App extends Component {
           </div>
         </ScrollableAnchor>
 
-        <ScrollableAnchor id={'section3'}>        
+        <ScrollableAnchor id={'section3'}>
+          <div>       
           <Segment style={{
             padding: '8em 0em',
             backgroundImage: `url(${sunset})`,
@@ -177,6 +178,7 @@ export default class App extends Component {
               </Grid.Row>
             </Grid>
           </Segment>
+          </div>
         </ScrollableAnchor>
 
 
