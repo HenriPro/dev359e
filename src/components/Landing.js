@@ -7,14 +7,12 @@ import {
   Icon,
   Image,
   List,
-  Menu,
   Segment,
   Visibility,
 } from 'semantic-ui-react'
 import FixedMenu from './FixedMenu'
 import TopMenu from './TopMenu'
 import ScrollableAnchor from 'react-scrollable-anchor'
-import logo from './../assets/draft1b.png'
 import pilers from './../assets/pilers.svg'
 import sunset from './../assets/sunset.svg'
 import theatre from './../assets/theatre.png'
