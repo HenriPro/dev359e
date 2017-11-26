@@ -19,7 +19,7 @@ export default class TopMenu extends Component {
           </Link>
         </Menu.Item>
         <Menu.Item ><Link to='/PlayBook' style={{color: 'purple'}}>Play Book</Link></Menu.Item>
-        <Menu.Item as='a'>Contact</Menu.Item>
+        <Menu.Item ><Link to='/ContactUs' style={{color: 'purple'}}>Contact</Link></Menu.Item>
       </Menu>
       </Container>
       )

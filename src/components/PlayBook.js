@@ -4,7 +4,9 @@ import {
   Segment,
   Header,
   List,
-  Visibility
+  Visibility,
+  Button,
+  Icon
 } from 'semantic-ui-react'
 import TopMenu from './TopMenu'
 import FixedMenu from './FixedMenu'
@@ -52,7 +54,7 @@ export default class PlayBook extends Component {
             </Container>
           </div>
         </Visibility>
-        
+
         <div style={{
           padding: '2em 0em',
         }} >
@@ -113,8 +115,15 @@ export default class PlayBook extends Component {
               </List.Item>
 
             </List>
+            <Container textAlign='center' style={{ padding: '2em' }} >
+              <Button href='#section3' size='huge' color='purple'>
+                Contact Us to Start
+                 <Icon name='right arrow' />
+              </Button>
+            </Container>
 
           </Container>
+
         </div>
       </div>
     )
