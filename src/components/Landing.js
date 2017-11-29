@@ -50,7 +50,7 @@ export default class Landing extends Component {
             }}
             vertical
           >
-            <TopMenu/>
+            <TopMenu match={this.props.match} />
             <Container text>
               <Header
                 as='h1'
