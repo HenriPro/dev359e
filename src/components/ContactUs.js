@@ -46,7 +46,6 @@ export default class ContactUs extends Component {
         this.setState({ loading: false });
       }
     }).catch( (error) => {
-      //updateMsg(contactForm, msgError);
       console.log(error);
       this.setState({ loading: false });
     });
@@ -61,7 +60,7 @@ export default class ContactUs extends Component {
       return (
         <Modal open={this.state.sentModalOpen}>
           <Modal.Header>Message Sent</Modal.Header>
-          <Modal.Content><p>We will email you back soon</p></Modal.Content>
+          <Modal.Content><p>We will email you back soon.</p></Modal.Content>
           <Modal.Actions>
           <Button icon='check' color='green' content='Okay' onClick={() => this.setState({sentModalOpen : false, modalOpen : false})} />
           </Modal.Actions>
@@ -85,7 +84,7 @@ export default class ContactUs extends Component {
             <Dimmer active={loading}>
               <Loader>Sending Message</Loader>
             </Dimmer>
-
+            <Header as='h3'>Free quote is on us!</Header>
             <Form onSubmit={this.handleSubmit}>
               <Form.Input type="text"
                 name="name"
@@ -94,7 +93,7 @@ export default class ContactUs extends Component {
                 value={name} onChange={this.handleChange} />
               <Form.Input type="email"
                 name="_replyto"
-                placeholder='yourName@yourCompany.com'
+                placeholder='name@yCompany.com'
                 label="Your Email:"
                 value={_replyto} onChange={this.handleChange} />
               <Form.TextArea type='text'
